@@ -1,30 +1,64 @@
+npm install
+npx playwright test
+
 # AutomationExercise-Playwright-NoBDD
 
-This project is an automated testing suite for the Automation Exercise website using Playwright. The repository is organized as follows:
+Automated end-to-end testing suite for the [Automation Exercise](https://automationexercise.com/) website using Playwright and JavaScript. This project covers user registration, login, contact forms, and scenario-based flows to ensure the website's core features work as expected.
 
-## Folders
+## Features
+- Automated UI tests for login, registration, contact forms, and scenarios
+- Organized test structure by feature
+- Uses Playwright for fast, reliable browser automation
+- Generates HTML reports on test failures
 
-- **src/**: Contains all source code, including test data and test scripts.
-  - **test-data/**: Sample files and data used for testing (e.g., file uploads).
-  - **tests/**: All test scripts, organized by feature or scenario.
-    - **Contact/**: Tests for the Contact Us feature.
-    - **TestScenario/**: Tests for various scenarios.
-    - **User/**: Tests for user actions such as login and registration.
+## Folder Structure
+
+```
+src/
+  test-data/         # Sample files and data for testing (e.g., uploads)
+  tests/
+    Contact/         # Contact Us feature tests
+    TestScenario/    # Scenario-based tests
+    User/            # User login and registration tests
+playwright.config.js # Playwright configuration
+package.json         # Project dependencies and scripts
+README.md            # Project documentation
+```
 
 ## Getting Started
 
-1. Install dependencies:
+1. **Install dependencies:**
+   ```sh
+   npm install
    ```
-npm install
+
+2. **Install Playwright browsers:**
+   ```sh
+   npx playwright install
    ```
-2. Run tests:
+
+3. **Run all tests:**
+   ```sh
+   npx playwright test
    ```
-npx playwright test
+
+4. **Run a specific test file:**
+   ```sh
+   npx playwright test src/tests/User/Login.spec.js
+   ```
+
+5. **View HTML test report:**
+   After a test run, open the HTML report:
+   ```sh
+   npx playwright show-report
    ```
 
 ## Technologies Used
-- Playwright
-- JavaScript
+- [Playwright](https://playwright.dev/)
+- JavaScript (ES6)
 
-## Purpose
-This suite automates end-to-end testing for the Automation Exercise website, ensuring key user flows work as expected.
+## Author
+Rishabh Jha
+
+## License
+ISC
